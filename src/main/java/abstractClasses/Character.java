@@ -1,7 +1,7 @@
-package AbstractClass;
+package abstractClasses;
 
 
-import Intarface.AliveEntity;
+import intarfaces.AliveEntity;
 
 import java.util.Objects;
 

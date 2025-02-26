@@ -1,4 +1,4 @@
-package Exaption;
+package exaptions;
 
 public class PlanetExept extends RuntimeException {
     public PlanetExept(String message) {

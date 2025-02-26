@@ -1,5 +1,5 @@
-package Class;
-import AbstractClass.Character;
+package classes;
+import abstractClasses.Character;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,28 +12,28 @@ public class Dunno extends Character {
     public int getMoney(){
         return money;
     }
-    private static final Logger logger = LogManager.getLogger(Dunno.class);
+    private static final Logger LOGGER = LogManager.getLogger(Dunno.class);
 
 
     @Override
     public void walk(String location) {
-        logger.info("Незнайка пришел в {}", location);
+        LOGGER.info("Незнайка пришел в {}", location);
         setWeight(getWeight() - 1, name);
     }
 
 
     @Override
     public void eat(String food1, String food2) {
-        logger.info("Незнайка съел {},{}", food1, food2);
+        LOGGER.info("Незнайка съел {},{}", food1, food2);
         setWeight(getWeight() + 3, name);
     }
 
     public void talk(String animal) {
-        logger.info("Незнайка начал болтать с {}, но так как это зверь он ему не ответил", animal);
+        LOGGER.info("Незнайка начал болтать с {}, но так как это зверь он ему не ответил", animal);
     }
 
     public void smokingLog(){
-        logger.info("Незнайка запел\n"+
+        LOGGER.info("Незнайка запел\n"+
                 "Сидим с бобром за столом\n" +
                 "Вдвоём, курим полено\n" +
                 "Давай поговорим, бобёр,\n" +

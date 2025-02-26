@@ -1,6 +1,6 @@
-package Enum;
+package enums;
 
-import Class.Dish;
+import classes.Dish;
 
 import java.util.concurrent.ThreadLocalRandom;
 

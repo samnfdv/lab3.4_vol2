@@ -1,6 +1,6 @@
-package Class;
+package classes;
 
-import AbstractClass.MealAbstract;
+import abstractClasses.MealAbstract;
 
 public class Meal extends MealAbstract {
     public Meal(String name, int temperature, int price) {

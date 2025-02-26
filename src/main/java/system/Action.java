@@ -1,6 +1,6 @@
 package system;
 
-import Exaption.PlanetExept;
+import exaptions.PlanetExept;
 
 
 public class Action {

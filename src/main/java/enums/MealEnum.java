@@ -1,5 +1,5 @@
-package Enum;
-import Class.Meal;
+package enums;
+import classes.Meal;
 
 import java.util.concurrent.ThreadLocalRandom;
 

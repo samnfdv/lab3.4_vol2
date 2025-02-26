@@ -1,4 +1,4 @@
-package Intarface;
+package intarfaces;
 
 
 public interface Location {

@@ -1,7 +1,7 @@
-package Record;
+package records;
 
-import AbstractClass.Character;
-import Intarface.Location;
+
+import intarfaces.Location;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

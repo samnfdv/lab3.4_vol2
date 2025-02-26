@@ -1,14 +1,12 @@
 package org.example;
 
-import AbstractClass.MealAbstract;
-import Class.*;
-import Enum.*;
-import Exaption.*;
+import classes.*;
+import exaptions.*;
 
-import static Enum.DishesEnum.getRandomEnumDish;
-import static Enum.MealEnum.getRandomEnumMeal;
+import static enums.DishesEnum.getRandomEnumDish;
+import static enums.MealEnum.getRandomEnumMeal;
 import static system.Action.isItReal;
-import Record.*;
+import records.CelestialObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +17,7 @@ import org.apache.logging.log4j.LogManager;
 
 public class Main {
 
-    private static final Logger logger = LogManager.getLogger(Main.class);
+    private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) {
 
@@ -38,16 +36,16 @@ public class Main {
         List<Integer> priceList = new ArrayList<>(List.of(320, 200, 250));
 
 
-        int cafe_type = random.nextInt(2);
+        int cafeType = random.nextInt(2);
         Cafe cafe;
-        if (cafe_type == 1) {
+        if (cafeType == 1) {
             cafe = restaurant;
         } else {
             cafe = cafeteria;
         }
 
-        int planet_type = random.nextInt(2);
-        CelestialObject planet = celestialObjects.get(planet_type);
+        int planetType = random.nextInt(2);
+        CelestialObject planet = celestialObjects.get(planetType);
 
         try {
             isItReal(planet.politicalRegime(), cafe.getName());
@@ -56,9 +54,9 @@ public class Main {
         } catch (PlanetExept err) {
             planet.location(planet.name());
             cafe.location(cafe.getName());
-            logger.error(err.getMessage());
-            logger.info("Идут в другое заведение");
-            if (cafe_type == 1) {
+            LOGGER.error(err.getMessage());
+            LOGGER.info("Идут в другое заведение");
+            if (cafeType == 1) {
                 cafe = cafeteria;
             } else {
                 cafe = restaurant;
@@ -74,11 +72,11 @@ public class Main {
         dunno.eat(getRandomEnumMeal().name(), getRandomEnumMeal().name());
         goat.eat(getRandomEnumMeal().name(), getRandomEnumMeal().name());
         bobr.eat(getRandomEnumMeal().name(), getRandomEnumMeal().name());
-        Dish d = getRandomEnumDish().getDish();
-        d.gettingDirty();
+        Dish dish = getRandomEnumDish().getDish();
+        dish.gettingDirty();
 
         if (cafe.isFreeFood()) {
-            logger.info("Друзья сказали спасибо повару");
+            LOGGER.info("Друзья сказали спасибо повару");
             int move = random.nextInt(2);
             if (move == 0) {
                 goat.butt();
@@ -90,10 +88,10 @@ public class Main {
             }
 
         } else {
-            logger.info("Незнайке принесли счет");
+            LOGGER.info("Незнайке принесли счет");
             int price = priceList.get(random.nextInt(priceList.size()));
             if (dunno.getMoney() > price) {
-                logger.info("Незнайка расплатился");
+                LOGGER.info("Незнайка расплатился");
                 int move = random.nextInt(2);
                 if (move == 0) {
                     goat.butt();
@@ -104,7 +102,7 @@ public class Main {
 
 
             } else {
-                logger.info("У незнайки не хватило денег");
+                LOGGER.info("У незнайки не хватило денег");
                 dunno.walk("pirson");
             }
 

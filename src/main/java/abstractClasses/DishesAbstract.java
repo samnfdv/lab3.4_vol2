@@ -1,6 +1,6 @@
-package AbstractClass;
+package abstractClasses;
 
-import Intarface.Dishes;
+import intarfaces.Dishes;
 
 import java.util.Objects;
 

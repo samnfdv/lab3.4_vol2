@@ -1,4 +1,4 @@
-package Intarface;
+package intarfaces;
 
 public interface AliveEntity extends Entity {
     void walk(String location);

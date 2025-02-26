@@ -1,6 +1,6 @@
-package AbstractClass;
+package abstractClasses;
 
-import Intarface.Entity;
+import intarfaces.Entity;
 
 import java.util.Objects;
 

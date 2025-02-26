@@ -1,6 +1,6 @@
-package Class;
+package classes;
 
-import AbstractClass.Place;
+import abstractClasses.Place;
 
 public class Cafe extends Place  {
 
