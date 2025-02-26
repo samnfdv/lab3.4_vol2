@@ -1,7 +1,7 @@
 package exaptions;
 
-public class PlanetExept extends RuntimeException {
-    public PlanetExept(String message) {
+public class PlanetExeption extends RuntimeException {
+    public PlanetExeption(String message) {
         super(message);
     }
   @Override

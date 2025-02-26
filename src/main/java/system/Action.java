@@ -1,13 +1,13 @@
 package system;
 
-import exaptions.PlanetExept;
+import exaptions.PlanetExeption;
 
 
 public class Action {
 
-    static public void isItReal(String regime,String cafe ) throws PlanetExept {
+    static public void isItReal(String regime,String cafe ) throws PlanetExeption {
         if((regime.equals("capitalism") & cafe.equals("Cafeteria"))| (regime.equals("communism") & cafe.equals("Restaurant"))){
-            throw new PlanetExept(cafe + " не может быть на этой планете");
+            throw new PlanetExeption(cafe + " не может быть на этой планете");
         }
     }
 

@@ -51,7 +51,7 @@ public class Main {
             isItReal(planet.politicalRegime(), cafe.getName());
             planet.location(planet.name());
             cafe.location(cafe.getName());
-        } catch (PlanetExept err) {
+        } catch (PlanetExeption err) {
             planet.location(planet.name());
             cafe.location(cafe.getName());
             LOGGER.error(err.getMessage());
