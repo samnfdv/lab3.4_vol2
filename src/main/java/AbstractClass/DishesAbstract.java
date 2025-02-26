@@ -45,7 +45,6 @@ public abstract class DishesAbstract implements Dishes {
 
     public void gettingDirty(){
         this.dirty = true;
-//        что-то еще надо написать
     }
 
     @Override
